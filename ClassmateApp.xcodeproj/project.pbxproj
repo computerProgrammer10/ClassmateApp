@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2329B8822CAECAB0006747FC /* addViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2329B8812CAECAB0006747FC /* addViewController.swift */; };
+		2329B8842CAECE21006747FC /* quizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2329B8832CAECE21006747FC /* quizViewController.swift */; };
+		23EE58792CAD8ED400E32094 /* editViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EE58782CAD8ED400E32094 /* editViewController.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		23CA68B32CAADC3300D1C906 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +30,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2329B8812CAECAB0006747FC /* addViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addViewController.swift; sourceTree = "<group>"; };
+		2329B8832CAECE21006747FC /* quizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizViewController.swift; sourceTree = "<group>"; };
 		23CA68992CAADC3100D1C906 /* ClassmateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassmateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23CA68B22CAADC3300D1C906 /* ClassmateAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassmateAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23CA68BC2CAADC3300D1C906 /* ClassmateAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassmateAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23EE58782CAD8ED400E32094 /* editViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -88,6 +97,9 @@
 		23CA68902CAADC3100D1C906 = {
 			isa = PBXGroup;
 			children = (
+				2329B8832CAECE21006747FC /* quizViewController.swift */,
+				2329B8812CAECAB0006747FC /* addViewController.swift */,
+				23EE58782CAD8ED400E32094 /* editViewController.swift */,
 				23CA689B2CAADC3100D1C906 /* ClassmateApp */,
 				23CA68B52CAADC3300D1C906 /* ClassmateAppTests */,
 				23CA68BF2CAADC3300D1C906 /* ClassmateAppUITests */,
@@ -249,6 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23EE58792CAD8ED400E32094 /* editViewController.swift in Sources */,
+				2329B8842CAECE21006747FC /* quizViewController.swift in Sources */,
+				2329B8822CAECAB0006747FC /* addViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
