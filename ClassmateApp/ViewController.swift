@@ -37,6 +37,9 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "addSegue", sender: self)
     }
     
-
+    @IBAction func foodAction(_ sender: Any) {
+        performSegue(withIdentifier: "quizSegue", sender: self)
+    }
+    
 }
 

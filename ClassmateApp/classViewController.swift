@@ -18,9 +18,9 @@ class classViewController: UIViewController {
     @IBOutlet weak var alphabeticalLabel: UILabel!
     
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var alphaButton: UIButton!
     
+    @IBOutlet weak var alphaButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
     var curStudent = 0
     var alphabetical = false

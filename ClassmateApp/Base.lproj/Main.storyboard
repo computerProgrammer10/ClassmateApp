@@ -36,15 +36,18 @@
                                     <action selector="viewClassAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ugb-qe-HrU"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OE5-oW-PZa">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OE5-oW-PZa">
                                 <rect key="frame" x="96" y="308" width="201" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Take A Quiz!">
+                                <state key="normal" title="Food Quiz!">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="foodAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lJr-XZ-qnS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whM-IA-3wb">
                                 <rect key="frame" x="96" y="359" width="201" height="43"/>
@@ -70,6 +73,7 @@
                         <outlet property="viewClassButton" destination="TQf-Jp-Sb8" id="ovY-BI-lI7"/>
                         <segue destination="TiJ-kL-LlD" kind="show" identifier="toClassSegue" id="TrX-kR-K5a"/>
                         <segue destination="SBp-Cd-mrT" kind="show" identifier="addSegue" id="jg8-Nb-qVG"/>
+                        <segue destination="dFk-zX-45y" kind="show" identifier="quizSegue" id="wQR-mN-32P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -160,20 +164,125 @@
             </objects>
             <point key="canvasLocation" x="1058.7786259541983" y="748.59154929577471"/>
         </scene>
-        <!--Quiz View Controller-->
+        <!--Quiz!-->
         <scene sceneID="nRv-kf-43g">
             <objects>
                 <viewController id="dFk-zX-45y" customClass="quizViewController" customModule="ClassmateApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kGf-kI-hv7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHw-Q0-fSh">
+                                <rect key="frame" x="35" y="120" width="323" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Results" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptL-oI-aId">
+                                <rect key="frame" x="35" y="494" width="323" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZ4-bC-s00">
+                                <rect key="frame" x="56" y="221" width="107" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Bananas">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="bananaAction:" destination="dFk-zX-45y" eventType="touchUpInside" id="SL1-8c-R76"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvf-vy-BcG">
+                                <rect key="frame" x="229" y="221" width="107" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Apples">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="appleAction:" destination="dFk-zX-45y" eventType="touchUpInside" id="MRP-3L-jWJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caf-OG-KT0">
+                                <rect key="frame" x="56" y="311" width="107" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.57949420103092786" green="0.38167083869616986" blue="0.1710198194235337" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Potatoes">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="potatoAction:" destination="dFk-zX-45y" eventType="touchUpInside" id="Pgs-Ug-I4F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMy-bw-b1j">
+                                <rect key="frame" x="229" y="311" width="107" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.64340367268041243" green="0.24273129825386619" blue="0.42143658723840555" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Cake">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="cakeAction:" destination="dFk-zX-45y" eventType="touchUpInside" id="gEU-CO-Qb2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edM-1S-qJ6">
+                                <rect key="frame" x="121" y="391" width="150" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Cupcakes">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="cupcakeAction:" destination="dFk-zX-45y" eventType="touchUpInside" id="N0A-uG-Dxh"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2L3-rf-YEb">
+                                <rect key="frame" x="108" y="612" width="177" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Again!">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="againAction:" destination="dFk-zX-45y" eventType="touchUpInside" id="1Cx-rc-YQn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="5fw-su-HGb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Quiz!" id="2f2-N3-LwX"/>
+                    <connections>
+                        <outlet property="againButton" destination="2L3-rf-YEb" id="Yb1-nr-Uxp"/>
+                        <outlet property="appleOutlet" destination="qvf-vy-BcG" id="B4M-Qs-UNw"/>
+                        <outlet property="bananaOutlet" destination="KZ4-bC-s00" id="AXK-u8-pOD"/>
+                        <outlet property="cakeOutlet" destination="jMy-bw-b1j" id="VgG-dw-tRs"/>
+                        <outlet property="cupcakeOutlet" destination="edM-1S-qJ6" id="nXp-1f-HcH"/>
+                        <outlet property="potatoOutlet" destination="caf-OG-KT0" id="P3J-J7-AN3"/>
+                        <outlet property="questionLabel" destination="EHw-Q0-fSh" id="oxb-Mr-1ia"/>
+                        <outlet property="resultsOutlet" destination="ptL-oI-aId" id="hzM-Wb-Oyg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9o-o4-Q6R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="671"/>
+            <point key="canvasLocation" x="1832.824427480916" y="669.71830985915494"/>
         </scene>
         <!--Classmate Information-->
         <scene sceneID="m8m-zj-118">
@@ -283,7 +392,7 @@
                         <outlet property="editButton" destination="z8l-TA-fsz" id="O5p-at-6KQ"/>
                         <outlet property="foodOutlet" destination="XPx-Gu-KHW" id="Ocy-SM-tX3"/>
                         <outlet property="nameOutlet" destination="s2M-8f-Uhf" id="AWI-ac-urx"/>
-                        <outlet property="nextButton" destination="64j-Fd-igS" id="Xgx-cd-ozX"/>
+                        <outlet property="nextButton" destination="l6N-8j-cbY" id="pcX-e1-TZO"/>
                         <outlet property="nickNameOutlet" destination="cDz-ET-IA7" id="ev4-Qn-U3p"/>
                         <segue destination="XAv-Le-LwJ" kind="show" identifier="toEditScreen" id="0wP-tR-ZPk"/>
                     </connections>
@@ -398,14 +507,23 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
