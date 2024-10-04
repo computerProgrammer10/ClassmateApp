@@ -13,9 +13,11 @@ class addViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameOutlet: UITextField!
     @IBOutlet weak var favFoodOutlet: UITextField!
     @IBOutlet weak var favClassOutlet: UITextField!
+    
+    @IBOutlet weak var submitButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        submitButton.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
     

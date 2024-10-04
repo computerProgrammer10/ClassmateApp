@@ -153,6 +153,7 @@
                         <outlet property="favFoodOutlet" destination="hCj-gx-kKf" id="417-YV-WzE"/>
                         <outlet property="nameOutlet" destination="xxl-GN-6fa" id="C5e-AU-9RO"/>
                         <outlet property="nicknameOutlet" destination="f1I-bb-dhO" id="nTk-Mz-k1N"/>
+                        <outlet property="submitButton" destination="xhm-XQ-SIg" id="Nax-7I-AGB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLD-8S-s5u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
