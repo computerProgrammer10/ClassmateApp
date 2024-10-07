@@ -22,8 +22,9 @@ class editViewController: UIViewController, UITextFieldDelegate {
     var student: Person!
     
     override func viewDidLoad() {
-        submitButton.layer.cornerRadius = 10
         super.viewDidLoad()
+        nameOutlet.delegate = self; nicknameOutlet.delegate = self; favFoodOutlet.delegate = self; favClassOutlet.delegate = self;
+        submitButton.layer.cornerRadius = 10
         nameOutlet.text = student.name
         nicknameOutlet.text = student.nickName
         switch student.favFood{
