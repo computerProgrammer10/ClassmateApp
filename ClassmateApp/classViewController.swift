@@ -31,6 +31,7 @@ class classViewController: UIViewController {
             backButton.isHidden = true
             nextButton.isHidden = true
             alphaButton.isHidden = true
+            alphabeticalLabel.isHidden = true
         }
         super.viewDidLoad()
         backButton.layer.cornerRadius = 10
