@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var viewClassButton: UIButton!
     
+    @IBOutlet weak var tableViewLabelOutlet: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,6 +27,7 @@ class ViewController: UIViewController {
         addButton.layer.cornerRadius = 10
         viewClassButton.layer.cornerRadius = 10
         nicknameQuizOutlet.layer.cornerRadius = 10
+        tableViewLabelOutlet.layer.cornerRadius = 10
         AppData.students.append(Person(favFood: .potatoes, name: "Pet-er Mickle", nickName: "Peter Kickle", favClass: "Computer Science"))
         AppData.students.append(Person(favFood: .bananas, name: "Ryan Stark", nickName: "Rat Ryan", favClass: "Explosions"))
         AppData.students.append(Person(favFood: .bananas, name: "Matthew Fitch", nickName: "Glitch Fitch", favClass: "View Controller Class"))
@@ -43,6 +45,11 @@ class ViewController: UIViewController {
         AppData.students.append(Person(favFood: .bananas, name: "Jayden", nickName: "Sleeping Sawyer", favClass: "Computer Science"))
         AppData.students.append(Person(favFood: .bananas, name: "Brennan", nickName: "Breaking Brennan", favClass: "Computer Science"))
         
+    }
+    
+    
+    @IBAction func tableViewAction(_ sender: Any) {
+        performSegue(withIdentifier: "tableViewSegue", sender: self)
     }
     
     @IBAction func viewClassAction(_ sender: Any) {

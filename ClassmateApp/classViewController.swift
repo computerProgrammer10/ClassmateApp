@@ -22,10 +22,16 @@ class classViewController: UIViewController {
     @IBOutlet weak var alphaButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
+    var showButtons = true
     var curStudent = 0
     var alphabetical = false
     var arrayToUse = AppData.students
     override func viewDidLoad() {
+        if (!showButtons){
+            backButton.isHidden = true
+            nextButton.isHidden = true
+            alphaButton.isHidden = true
+        }
         super.viewDidLoad()
         backButton.layer.cornerRadius = 10
         nextButton.layer.cornerRadius = 10

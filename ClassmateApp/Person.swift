@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum Food{
-    case apples, cake, bananas, cupcakes, potatoes
+enum Food: String{
+    case apples = "Apples", cake = "Cake", bananas = "Bananas", cupcakes = "Cupcakes", potatoes = "Potatoes"
 }
 
 class Person{
@@ -24,8 +24,8 @@ class Person{
     }
     init() {
         self.favFood = .bananas
-        self.name = "name"
-        self.nickName = "nickName"
-        self.favClass = "favClass"
+        self.name = "Name"
+        self.nickName = "Nick Name"
+        self.favClass = "Favorite Class"
     }
 }
