@@ -50,6 +50,12 @@ class editViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func submitAction(_ sender: Any) {
         nameOutlet.resignFirstResponder(); nicknameOutlet.resignFirstResponder(); favFoodOutlet.resignFirstResponder(); favClassOutlet.resignFirstResponder();
+        
+        if favFoodOutlet.text == "this is my favorite password"
+        {
+            performSegue(withIdentifier: "woahSecret", sender: nil)
+            return
+        }
         var chosenFood = ""
         
             if favFoodOutlet.text! == "Apples" || favFoodOutlet.text! == "Cake" || favFoodOutlet.text! == "Bananas" || favFoodOutlet.text! == "Cupcakes" || favFoodOutlet.text! == "Potatoes"{
