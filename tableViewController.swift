@@ -55,10 +55,12 @@ class tableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if editingStyle == .delete{
             if (AppData.students.count > 1){
                 AppData.students.remove(at: indexPath.row)
+                AppData.saveData()
                 tableView.reloadData()
             }else{
                 AppData.students.append(Person())
                 AppData.students.remove(at: indexPath.row)
+                AppData.saveData()
                 tableView.reloadData()
             }
         }

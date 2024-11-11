@@ -83,6 +83,7 @@ class editViewController: UIViewController, UITextFieldDelegate {
             }
             student.favClass = favClassOutlet.text!
             createAlert(alertTitle: "Student Edited", alertDesc: "It's Done!")
+            AppData.saveData()
         }
                 
     }

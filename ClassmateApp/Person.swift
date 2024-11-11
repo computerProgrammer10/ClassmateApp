@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum Food: String{
+enum Food: String, Codable{
     case apples = "Apples", cake = "Cake", bananas = "Bananas", cupcakes = "Cupcakes", potatoes = "Potatoes"
 }
 
-class Person{
+class Person: Codable{
     var favFood: Food
     var name: String
     var nickName: String

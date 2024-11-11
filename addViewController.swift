@@ -57,6 +57,7 @@ class addViewController: UIViewController, UITextFieldDelegate {
             nicknameOutlet.text = ""
             favFoodOutlet.text = ""
             favClassOutlet.text = ""
+            AppData.saveData()
         }
     }
     @IBAction func gestureAction(_ sender: Any) {
